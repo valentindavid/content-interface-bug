@@ -2,8 +2,8 @@
 
 set -eux
 
-(cd A; snapcraft) &
-(cd B; snapcraft) &
+(cd A; snapcraft clean) &
+(cd B; snapcraft clean) &
 wait
 
 (cd A; snapcraft) &

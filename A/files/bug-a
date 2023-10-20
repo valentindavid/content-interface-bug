@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -eu
+
+[ -d "${SNAP_DATA}/export" ] || mkdir -p "${SNAP_DATA}/export"
+touch "${SNAP_DATA}/export/test-file"

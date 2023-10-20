@@ -1,0 +1,24 @@
+name: bug-a
+base: core22
+version: '0.1'
+summary: A
+description: A
+grade: stable
+confinement: strict
+
+slots:
+  my-interface:
+    interface: content
+    source:
+      write:
+        - $SNAP_DATA/export
+
+apps:
+  bug-a:
+    command: bug-a
+    slots: [my-interface]
+
+parts:
+  application:
+    source: files
+    plugin: dump
